@@ -123,3 +123,51 @@ body{
     color: var(--Gray);
 }
 
+@media (min-width: 1440px){
+.slider{
+    width: 1000px;
+    min-height: 450px;
+    margin: 2rem auto;
+    padding-top: 150px;
+}
+
+.slide{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: auto;  /* Changed to auto */
+}
+
+.slide-img{
+    width: 50%;
+}
+
+.details{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-img > img{
+    width: 70%;
+    height: 300px;
+}
+
+.controls{
+    position: absolute;
+    bottom: 85px; 
+    right: 50px;
+    transform: translateX(220px);
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    background: white;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+}
