@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue: hsl(240, 38%, 20%);
+  --Gray: hsl(240, 18%, 77%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* slider container */
+.slider{
+    width: 450px;
+    position: relative;
+    min-height: 800px;
+    overflow: visible;
+    margin: 0 auto;  /* Center the slider */
+    padding-top: 50px;  /* Add some space at the top */
+}
+
+.slide{
+    width: 100%;
+    height: auto;  /* Changed to auto */
+    margin: 0 auto;
+    opacity: 0;
+    visibility: hidden;  /* Added visibility */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+.slide.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 1;
+}
+.slide-img{
+    position: relative;
+    padding: 45px 0;
+    background-image: url(/images/pattern-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide-img > img{
+    width: 80%;
+    height: 330px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 50px var(--Gray);
+}
+
+.controls{
+    position: absolute;
+    bottom: 50%; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    background: white;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.controls button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.controls:hover{
+    cursor: pointer;
+}
+.controls:hover{
+    cursor: pointer;
+}
+.controls button{
+    background: none;
+    border: none;
+}
+
+.details{
+    padding: 15px 0 30px 0;
+    background-image: 
+    url(./images/pattern-quotes.svg),
+    url(./images/pattern-curve.svg)
+    ;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom left;
+    background-size: 130px, 330px;
+}
+.details > p{
+    color: var(--Blue);
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.details h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 15px 0 25px 0;
+}
+.details > h3 > span{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--Gray);
+}
+
